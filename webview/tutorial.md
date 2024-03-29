@@ -94,9 +94,43 @@ console.log(regex.test("banana")); // true
 console.log(regex.test("cherry")); // false
 ```
 
-
-
 ### Flags
+
+Flags in regular expressions are modifiers that alter the behavior of pattern matching. They are appended after the closing slash of a regex literal in JavaScript (e.g., /pattern/flags). Each flag serves a specific purpose and can change how the regex engine interprets the pattern. Here's an expanded description of common flags:<br/>
+<strong><ins>i (case-insensitive):</ins></strong><br/>
+
+When this flag is used, the regex engine ignores the case of letters while performing matches. For example, /hello/i would match "hello", "HELLO", "Hello", etc.<br/>
+```javascript
+const regex = /hello/i;
+console.log(regex.test("Hello")); // true
+console.log(regex.test("HELLO")); // true
+console.log(regex.test("Hi there")); // false
+```
+<strong><ins>g (global match):</ins></strong><br/>
+
+This flag enables global matching, meaning the regex engine will find all matches in the input string rather than stopping after the first match. It's particularly useful with methods like String.prototype.matchAll() or when you want to replace all occurrences of a pattern using String.prototype.replace().<br/>
+
+```javascript
+const regex = /a/g;
+const input = "banana";
+let match;
+while ((match = regex.exec(input)) !== null) {
+  console.log(`Found '${match[0]}' at index ${match.index}`);
+}
+// Output:
+// Found 'a' at index 1
+// Found 'a' at index 3
+```
+<strong><ins>m (multi-line match):</ins></strong><br/>
+
+When the multi-line flag is used, the ^ and $ anchors match the beginning and end of each line in a multi-line string, respectively, rather than the entire string.
+
+```javascript
+const regex = /^start/m;
+const input = "start\nmiddle\nend";
+console.log(regex.test(input)); // true
+```
+
 
 ### Grouping and Capturing
 
