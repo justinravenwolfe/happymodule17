@@ -34,7 +34,13 @@ Anchors in regular expressions are used to specify the position of a match withi
 
 
 ### Quantifiers
-Quantifiers define the number of occurrences of a character or a group in a regex pattern. Common quantifiers include * (zero or more occurrences), + (one or more occurrences), ? (zero or one occurrence), {n} (exactly n occurrences), {n,} (at least n occurrences), and {n,m} (between n and m occurrences).
+Quantifiers define the number of occurrences of a character or a group in a regex pattern. Common quantifiers include :<br />
+  (1) * (zero or more occurrences).<br />
+  (2) + (one or more occurrences).<br />
+  (3) ? (zero or one occurrence).<br />
+  (4) {n} (exactly n occurrences).<br />
+  (5) {n,} (at least n occurrences).<br />
+  (6) {n,m} (between n and m occurrences).<br />
 
 ```javascript
 const regex = /a+/;
