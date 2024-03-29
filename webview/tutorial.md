@@ -4,7 +4,7 @@ Regular expressions, often abbreviated as regex or regexp, are powerful tools us
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In this guide, we will delve into the intricacies of regular expressions in JavaScript, covering essential components such as anchors, quantifiers, the OR operator, character classes, flags, grouping and capturing, bracket expressions, greedy and lazy matching, boundaries, back-references, look-ahead, and look-behind assertions. Each section will explore these components in detail, accompanied by examples and explanations to help you understand their usage and application in JavaScript.
 
 ## Table of Contents
 
