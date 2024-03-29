@@ -142,8 +142,12 @@ console.log(match[1]); // apple
 ```
 
 ### Bracket Expressions
-
-
+Bracket expressions, similar to character classes, match a single character from a specified set. They are denoted by square brackets [ ] and provide more advanced matching options.
+```javascript
+const regex = /[a-zA-Z]/; // matches any letter
+console.log(regex.test("123")); // false
+console.log(regex.test("A")); // true
+```
 
 ### Greedy and Lazy Match
 
