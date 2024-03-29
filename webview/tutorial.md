@@ -151,6 +151,19 @@ console.log(regex.test("A")); // true
 
 ### Greedy and Lazy Match
 
+<strong><ins>Greedy Matching:</strong></ins> <br/>
+Greedy quantifiers in regular expressions match as much of the string as possible while still allowing the overall pattern to match. They are denoted by symbols such as *, +, ?, and { }. Here's how they behave:<br/>
+
+*: Matches zero or more occurrences of the preceding element. It will match as many occurrences as possible.<br/>
++: Matches one or more occurrences of the preceding element. Like *, it is greedy.<br/>
+?: Matches zero or one occurrence of the preceding element. It is also greedy.<br/>
+{ }: Matches exactly the specified number of occurrences or within a range. When used without the ? modifier, it is greedy.<br/>
+```javascript
+const regex = /".*"/; // greedy match
+console.log('"cat" sat on the "mat"'.match(regex)); // ["cat" sat on the "mat"]
+//It's greedy, so it consumes as much text as possible until it encounters the last " character in the string.
+```
+
 ### Boundaries
 
 ### Back-references
