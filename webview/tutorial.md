@@ -48,9 +48,18 @@ console.log(regex.test("aa")); // true
 console.log(regex.test("b")); // false
 ```
 
-
-
 ### OR Operator
+
+  The OR operator, denoted by |, allows specifying multiple alternatives in a regex pattern. It matches either the expression before or after it.
+
+```javascript
+const regex = /apple|banana/;
+console.log(regex.test("apple pie")); // true
+console.log(regex.test("banana split")); // true
+console.log(regex.test("cherry pie")); // false
+```
+
+
 
 ### Character Classes
 
