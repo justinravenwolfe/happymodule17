@@ -204,6 +204,14 @@ console.log(regex.test("apple pie")); // true
 ```
 
 ### Back-references
+Back-references allow referencing previously captured groups within a regex pattern. They are denoted by \ followed by the group number.
+
+```javascript
+const regex = /(\d{3})-\1/;
+console.log(regex.test("123-123")); // true
+console.log(regex.test("123-456")); // false
+```
+
 
 ### Look-ahead and Look-behind
 
