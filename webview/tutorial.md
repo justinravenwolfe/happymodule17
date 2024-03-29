@@ -63,6 +63,39 @@ console.log(regex.test("cherry pie")); // false
 
 ### Character Classes
 
+Character classes in regular expressions are powerful tools for matching specific sets of characters within a string. They are denoted by square brackets [ ] and provide a flexible way to define which characters you want to match. Here's an expanded explanation of the features of character classes: <br />
+
+<strong>Single Characters:</strong> Inside a character class, you can specify single characters that you want to match exactly. For example, [abc] matches either 'a', 'b', or 'c'. <br />
+
+<strong>Ranges:</strong> You can define a range of characters using a hyphen - inside the brackets. For instance, [a-z] matches any lowercase letter from 'a' to 'z'. Similarly, [0-9] matches any digit. <br />
+
+<strong>Negation:</strong> If you prepend a caret ^ inside the brackets, it negates the character class. This means it matches any character that is not listed inside the brackets. For example, [^0-9] matches any character that is not a digit. <br />
+
+<strong>Shorthand Notations:</strong> Regular expressions provide shorthand notations for common character classes:<br />
+
+<strong>\d:</strong> Matches any digit character. Equivalent to [0-9].<br />
+<strong>\D:</strong> Matches any non-digit character. Equivalent to [^0-9].<br />
+<strong>\w:</strong> Matches any word character (alphanumeric character plus underscore). Equivalent to [a-zA-Z0-9_].<br />
+<strong>\W:</strong> Matches any non-word character. Equivalent to [^a-zA-Z0-9_].<br />
+<strong>\s:</strong> Matches any whitespace character (space, tab, newline, etc.).<br />
+<strong>\S:</strong> Matches any non-whitespace character.<br />
+
+
+```javascript
+const regex = /[a-zA-Z0-9]/; // Matches any alphanumeric character
+console.log(regex.test("Hello123")); // true
+console.log(regex.test("@#$%")); // false
+```
+
+```javascript
+const regex = /[aeiou]/;
+console.log(regex.test("apple")); // true
+console.log(regex.test("banana")); // true
+console.log(regex.test("cherry")); // false
+```
+
+
+
 ### Flags
 
 ### Grouping and Capturing
