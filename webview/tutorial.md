@@ -177,9 +177,20 @@ const lazyRegex = /".*?"/; // lazy match
 console.log('"apple" and "banana"'.match(lazyRegex)); // ["apple"]
 //Lazy quantifiers match as little as possible while still allowing the overall pattern to match. So, .*? will try to match as few characters as possible.
 ```
-
-
 ### Boundaries
+
+<strong><ins>\b Boundary:</strong></ins> <br/>
+The \b boundary in regular expressions marks the position at the beginning or end of a word. Specifically:<br/>
+
+It asserts a position where a word character (alphanumeric or underscore) is followed or preceded by a non-word character.<br/>
+It matches where the word character is at the beginning or end of the string or is adjacent to a non-word character such as space, punctuation, or the start or end of the line.<br/>
+
+
+```javascript
+const regex = /\bapp\b/;
+console.log(regex.test("apple")); // true
+console.log(regex.test("apple pie")); // false
+```
 
 ### Back-references
 
