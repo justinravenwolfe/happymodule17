@@ -244,4 +244,6 @@ console.log(regex.test("banana pie")); // false
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Justin Ramirez [GitHub](https://github.com/justinravenwolfe)
+## Co-author
+Omaran Bazna [GitHub](https://github.com/omaranBazna)
