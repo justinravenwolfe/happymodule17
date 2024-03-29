@@ -192,6 +192,17 @@ console.log(regex.test("apple")); // true
 console.log(regex.test("apple pie")); // false
 ```
 
+<strong><ins>\B Boundary:</strong></ins> <br/>
+The \B boundary is the opposite of \b. It marks the position where a word character is not followed or preceded by another word character. Specifically:<br/>
+
+It asserts a position where a word character (alphanumeric or underscore) is not followed or preceded by a non-word character.<br/>
+It matches where the word character is within a word, not at the beginning or end of the string, and is adjacent to other word characters.<br/>
+```javascript
+const regex = /\Bapp\B/;
+console.log(regex.test("apple")); // false
+console.log(regex.test("apple pie")); // true
+```
+
 ### Back-references
 
 ### Look-ahead and Look-behind
