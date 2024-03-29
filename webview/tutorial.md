@@ -164,6 +164,21 @@ console.log('"cat" sat on the "mat"'.match(regex)); // ["cat" sat on the "mat"]
 //It's greedy, so it consumes as much text as possible until it encounters the last " character in the string.
 ```
 
+<strong><ins>Lazy Matching:</strong></ins> <br/>
+Lazy (or non-greedy) quantifiers, denoted by symbols like *?, +?, ??, and { }?, match as little as possible while still allowing the overall pattern to match. They are essentially the opposite of greedy quantifiers. Here's how they work:<br/>
+
+*?: Matches zero or more occurrences of the preceding element, but as few as possible.<br/>
++?: Matches one or more occurrences of the preceding element, but as few as possible.<br/>
+??: Matches zero or one occurrence of the preceding element, but as few as possible.<br/>
+{ }?: Matches the specified number of occurrences or within a range, but as few as possible.<br/>
+
+```javascript
+const lazyRegex = /".*?"/; // lazy match
+console.log('"apple" and "banana"'.match(lazyRegex)); // ["apple"]
+//Lazy quantifiers match as little as possible while still allowing the overall pattern to match. So, .*? will try to match as few characters as possible.
+```
+
+
 ### Boundaries
 
 ### Back-references
