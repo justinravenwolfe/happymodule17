@@ -228,8 +228,19 @@ console.log(regex.test("apple pie")); // true
 console.log(regex.test("apple juice")); // false
 ```
 
+<strong><ins>Look-behind Assertions (?<= ):</strong></ins> <br/>
+Look-behind assertions match a group of characters only if they are preceded by another pattern, without including the pattern in the match result. Specifically:<br/>
+
+-They are denoted by (?<= ).<br/>
+-They assert whether a pattern is present immediately before the current position in the string, without consuming -any characters.<br/>
+-They are useful for checking if a certain pattern exists behind in the string without including it in the match.
 
 
+```javascript
+const regex = /(?<=apple )pie/;
+console.log(regex.test("apple pie")); // true
+console.log(regex.test("banana pie")); // false
+```
 
 ## Author
 
