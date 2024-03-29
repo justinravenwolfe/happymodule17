@@ -133,8 +133,17 @@ console.log(regex.test(input)); // true
 
 
 ### Grouping and Capturing
+Grouping and capturing in regular expressions allow parts of a pattern to be treated as a single unit. They are denoted by parentheses ( ) and can be referenced later in the regex or in replacement strings.
+
+```javascript
+const regex = /(apple|banana) pie/;
+const match = "apple pie".match(regex);
+console.log(match[1]); // apple
+```
 
 ### Bracket Expressions
+
+
 
 ### Greedy and Lazy Match
 
