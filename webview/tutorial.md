@@ -214,6 +214,22 @@ console.log(regex.test("123-456")); // false
 
 
 ### Look-ahead and Look-behind
+<strong><ins>Look-ahead Assertions (?= ):</strong></ins> <br/>
+Look-ahead assertions match a group of characters only if they are followed by another pattern, without including the pattern in the match result. Specifically:<br/>
+
+-They are denoted by (?= ).<br/>
+-They assert whether a pattern is present immediately after the current position in the string, without consuming any characters.<br/>
+-They are useful for checking if a certain pattern exists ahead in the string without including it in the match.
+
+
+```javascript
+const regex = /apple(?= pie)/;
+console.log(regex.test("apple pie")); // true
+console.log(regex.test("apple juice")); // false
+```
+
+
+
 
 ## Author
 
